@@ -1,7 +1,11 @@
 #!/usr/bin/node
+// Prints the addition of 2 integers
+const process = require('process');
+const args = process.argv;
+const n1 = parseInt(args[2]);
+const n2 = parseInt(args[3]);
 function add (a, b) {
-  const c = a + b;
-  console.log(c);
+  const addition = a + b;
+  return (addition);
 }
-
-add(Number(process.argv[2]), Number(process.argv[3]));
+console.log(add(n1, n2));

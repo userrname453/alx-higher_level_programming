@@ -1,4 +1,9 @@
 #!/usr/bin/node
-for (const line of ['C is fun', 'Python is cool', 'JavaScript is amazing']) {
-  console.log(line);
+// Print three strings
+const myVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const len = myVar.length;
+let i = 0;
+while (i < len) {
+  console.log(myVar[i]);
+  i++;
 }

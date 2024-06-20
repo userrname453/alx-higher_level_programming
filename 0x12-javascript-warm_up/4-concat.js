@@ -1,2 +1,12 @@
 #!/usr/bin/node
-console.log(process.argv[2] + ' is ' + process.argv[3]);
+// Prints out a sentence
+const process = require('process');
+const myArgs = process.argv;
+// Calculate length of arguments
+let len = 0;
+myArgs.forEach((item) => {
+  len++;
+});
+if (len <= 4) {
+  console.log(myArgs[2] + ' ' + 'is' + ' ' + myArgs[3]);
+}

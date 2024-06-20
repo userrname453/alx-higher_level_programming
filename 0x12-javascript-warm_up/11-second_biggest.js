@@ -1,8 +1,18 @@
 #!/usr/bin/node
-if (process.argv.length <= 3) {
-  console.log('0');
-} else {
-  const arr = process.argv.slice(2).map(Number);
-  const second = arr.sort(function (a, b) { return b - a; })[1];
-  console.log(second);
+// Searches for second biggest integer in the list of arguments
+const process = require('process');
+const args = process.argv.slice(2);
+function secondBiggest (args) {
+  const n = args.length;
+  if (n < 2) {
+    return 0;
+  }
+  args.sort((a, b) => parseInt(b) - parseInt(a));
+  let i;
+  for (i = 1; i < n; i++) {
+    if (args[i] !== args[0]) {
+      return args[i];
+    }
+  }
 }
+console.log(secondBiggest(args));
